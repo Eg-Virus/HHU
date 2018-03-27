@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.ObservationMessageSummary">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView" ControlTemplate="{StaticResource WithoutTitleTemplate}"
+                  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  >
+      <Grid.RowDefinitions>
+        <RowDefinition  Height="0.2*"/>
+        <RowDefinition  Height="0.6*"/>
+        <RowDefinition  Height="0.15*"/>
+      </Grid.RowDefinitions>
+      <Label x:Name="LblPageName" Grid.Row="0"  FontAttributes="Bold"  Style="{StaticResource LabelStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+      <Grid Grid.Row="1" BackgroundColor="Gray" Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+        <Grid.RowDefinitions>
+          <RowDefinition  Height="0.2*"/>
+          <RowDefinition  Height="0.2*"/>
+          <RowDefinition  Height="0.2*"/>
+          <RowDefinition  Height="0.2*"/>
+          <RowDefinition  Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="LblObservationType" Grid.Row="0" FontAttributes="Bold" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Style="{StaticResource LabelStyle}"/>
+        <Label x:Name="LblObservationNumber" Grid.Row="1"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Style="{StaticResource LabelStyle}"/>
+        <Label x:Name="LblAirborneType" Grid.Row="2"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Style="{StaticResource LabelStyle}"/>
+        <Label x:Name="LblAltitude" Grid.Row="3"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Style="{StaticResource LabelStyle}"/>
+        <Label x:Name="LblHeading" Grid.Row="4"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Style="{StaticResource LabelStyle}"/>
+      </Grid>
+      <Grid x:Name="GrdDirection" Grid.Row="2" Grid.Column="0" VerticalOptions="Fill"  HorizontalOptions="Fill">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.4*" />
+          <ColumnDefinition Width="0.2*" />
+          <ColumnDefinition Width="0.4*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnBack"  Grid.Column="0" BorderRadius="10"
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnBack_OnClicked" >
+        </Button>
+        <!--<Grid x:Name="GrdSteps" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Image Grid.Column="1" x:Name="Img1" VerticalOptions="Center" />
+          <Image Grid.Column="2" x:Name="Img2" VerticalOptions="Center"/>
+          <Image Grid.Column="3" x:Name="Img3" VerticalOptions="Center"/>
+          <Image Grid.Column="4" x:Name="Img4" VerticalOptions="Center"/>
+          <Image Grid.Column="5" x:Name="Img5" VerticalOptions="Center"/>
+        </Grid>-->
+        <Button x:Name="BtnSend"  Grid.Column="2" BorderRadius="10"
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnSend_OnClicked" >
+        </Button>
+      </Grid>
+    </Grid>
+  </ContentView>
+</views:MainView>

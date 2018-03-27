@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.Heading">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView"
+                 ControlTemplate="{StaticResource SelectionTemplate}" VerticalOptions="FillAndExpand"  >
+    <Grid VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.77*"/>
+        <RowDefinition Height="0.23*" />
+      </Grid.RowDefinitions>
+      <Grid Grid.Column="0" Grid.Row="0">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          <Grid Grid.Column="0" Grid.Row="0" BackgroundColor="#396736" Margin="0,5,5,5">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.75*" />
+              <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="BtnNorth" Grid.Row="0" WidthRequest="100" HeightRequest="90"  BackgroundColor="Transparent"  Clicked="BtnNorth_OnClicked"/>
+            <Label Grid.Row="1" x:Name="LblNorth"  Style="{StaticResource LabelStyleSmall}"/>
+          </Grid>
+          <Grid Grid.Column="1" Grid.Row="0" BackgroundColor="#396736" Margin="5,5,0,5">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.75*" />
+              <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="BtnEast" Grid.Row="0" WidthRequest="100" HeightRequest="90"  BackgroundColor="Transparent"  Clicked="BtEast_OnClicked"/>
+            <Label Grid.Row="1" x:Name="LblEast"  Style="{StaticResource LabelStyleSmall}"/>
+          </Grid>
+          <Grid Grid.Column="0" Grid.Row="1" BackgroundColor="#396736" Margin="0,5,5,5">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.75*" />
+              <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="BtnWest" Grid.Row="0" WidthRequest="100" HeightRequest="90" BackgroundColor="Transparent"   Clicked="BtnWest_OnClicked"/>
+            <Label Grid.Row="1" x:Name="LblWest"  Style="{StaticResource LabelStyleSmall}"/>
+          </Grid>
+          <Grid Grid.Column="1" Grid.Row="1" BackgroundColor="#396736" Margin="5,5,0,5">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.75*" />
+              <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="BtnSouth" Grid.Row="0" WidthRequest="100" HeightRequest="90"  BackgroundColor="Transparent"  Clicked="BtnSouth_OnClicked"/>
+            <Label Grid.Row="1" x:Name="LblSouth"  Style="{StaticResource LabelStyleSmall}"/>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid Grid.Column="0" Grid.Row="1">
+        <Grid x:Name="GrdDirection" Grid.Column="0" VerticalOptions="Fill"  HorizontalOptions="Fill">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.4*" />
+          </Grid.ColumnDefinitions>
+          <Button x:Name="BtnBack"  Grid.Column="0" BorderRadius="10"
+                     BackgroundColor="#396736" TextColor="White" Clicked="BtnBack_OnClicked" >
+          </Button>
+          <!--<Grid x:Name="GrdSteps" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" x:Name="Img1" VerticalOptions="Center" />
+            <Image Grid.Column="2" x:Name="Img2" VerticalOptions="Center"/>
+            <Image Grid.Column="3" x:Name="Img3" VerticalOptions="Center"/>
+            <Image Grid.Column="4" x:Name="Img4" VerticalOptions="Center"/>
+            <Image Grid.Column="5" x:Name="Img5" VerticalOptions="Center"/>
+          </Grid>-->
+          <Button x:Name="BtnNext"  Grid.Column="2" BorderRadius="10"
+                     BackgroundColor="#396736" TextColor="White" Clicked="BtnNext_OnClicked" >
+          </Button>
+        </Grid>
+
+      </Grid>
+    </Grid>
+  </ContentView>
+</views:MainView>

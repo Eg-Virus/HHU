@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74043E51-EF7B-4CE1-AF3F-7612ED1D05B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirObservationSystem.HHU.Core</RootNamespace>
+    <AssemblyName>AirObservationSystem.HHU.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Model\Message\AMessage.cs" />
+    <Compile Include="Model\Message\IMessage.cs" />
+    <Compile Include="Model\Message\RecievedMessage.cs" />
+    <Compile Include="Model\Message\SentMessage.cs" />
+    <Compile Include="Model\Old Code\AudibleObservationBody.cs" />
+    <Compile Include="Model\Old Code\AvailableCallingMethodBody.cs" />
+    <Compile Include="Model\Old Code\CallDestinationBody.cs" />
+    <Compile Include="Model\Old Code\ClientMsgBody.cs" />
+    <Compile Include="Model\Old Code\CommandPacket.cs" />
+    <Compile Include="Model\Old Code\CommandPacketFactory.cs" />
+    <Compile Include="Model\Old Code\DestroyBody.cs" />
+    <Compile Include="Model\Old Code\GpsInProgressRequest.cs" />
+    <Compile Include="Model\Old Code\GSMConnectNotificationBody.cs" />
+    <Compile Include="Model\Old Code\GsmMsgSendResultBody.cs" />
+    <Compile Include="Model\Old Code\KeepAliveBody.cs" />
+    <Compile Include="Model\Old Code\LocationBody.cs" />
+    <Compile Include="Model\Old Code\LockBody.cs" />
+    <Compile Include="Model\Old Code\LoginRequestBody.cs" />
+    <Compile Include="Helpers\EnumUtil.cs" />
+    <Compile Include="Helpers\Enums.cs" />
+    <Compile Include="Helpers\Static.cs" />
+    <Compile Include="Infrastructure\AppContainer.cs" />
+    <Compile Include="Infrastructure\AppSetup.cs" />
+    <Compile Include="Infrastructure\DatabaseFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Model\Old Code\Algorithm.cs" />
+    <Compile Include="Model\Old Code\Header.cs" />
+    <Compile Include="Model\Old Code\HeaderList.cs" />
+    <Compile Include="Model\Old Code\IBody.cs" />
+    <Compile Include="Model\Old Code\LoginResponseBody.cs" />
+    <Compile Include="Model\Old Code\MessagesStatus.cs" />
+    <Compile Include="Model\Old Code\MessagesStatusRequsetBody.cs" />
+    <Compile Include="Model\Old Code\MessagesStatusResponseBody.cs" />
+    <Compile Include="Model\Old Code\PhoneCallBody.cs" />
+    <Compile Include="Model\Old Code\PlatoonMsgBody.cs" />
+    <Compile Include="Model\Old Code\RequestPacket.cs" />
+    <Compile Include="Model\Old Code\StatusRequestBody.cs" />
+    <Compile Include="Model\Old Code\StatusRequester.cs" />
+    <Compile Include="Model\Old Code\SynchTimeRequest.cs" />
+    <Compile Include="Model\Old Code\SynchTimeResponse.cs" />
+    <Compile Include="Model\Old Code\TextObservationBody.cs" />
+    <Compile Include="Model\Old Code\VisualObservationBody.cs" />
+    <Compile Include="PlatformInterface\ICrc32.cs" />
+    <Compile Include="PlatformInterface\IMedia.cs" />
+    <Compile Include="Infrastructure\IDatabaseFactory.cs" />
+    <Compile Include="Model\User\IUInfo.cs" />
+    <Compile Include="Model\User\Region.cs" />
+    <Compile Include="Model\User\SystemGroup.cs" />
+    <Compile Include="Model\User\SystemRole.cs" />
+    <Compile Include="Model\User\User.cs" />
+    <Compile Include="Model\User\UserRegion.cs" />
+    <Compile Include="PlatformInterface\IPlatform.cs" />
+    <Compile Include="Repository\Message\RecievedMessageRepository.cs" />
+    <Compile Include="Repository\Message\SentMessageRepository.cs" />
+    <Compile Include="Repository\User\IUInfoRepository.cs" />
+    <Compile Include="Repository\User\RegionRepository.cs" />
+    <Compile Include="Repository\User\SystemGroupRepository.cs" />
+    <Compile Include="Repository\User\SystemRoleRepository.cs" />
+    <Compile Include="Repository\User\UserRegionRepository.cs" />
+    <Compile Include="Repository\User\UserRepository.cs" />
+    <Compile Include="Resx\Resources.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Base\RepositoryBase.cs" />
+    <Compile Include="Repository\Base\IRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resx\TranslateExtension.cs" />
+    <Compile Include="PlatformInterface\ICultureInfo.cs" />
+    <Compile Include="Services\PCLCultureInfo.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\IViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\Pages\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\AirborneCraft.xaml.cs">
+      <DependentUpon>AirborneCraft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Altitude.xaml.cs">
+      <DependentUpon>Altitude.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\CommunicationSelection.xaml.cs">
+      <DependentUpon>CommunicationSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ComposeMessage.xaml.cs">
+      <DependentUpon>ComposeMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Heading.xaml.cs">
+      <DependentUpon>Heading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Lock.xaml.cs">
+      <DependentUpon>Lock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ObservationMessageSummary.xaml.cs">
+      <DependentUpon>ObservationMessageSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Reports.xaml.cs">
+      <DependentUpon>Reports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\TextMessageSummary.xaml.cs">
+      <DependentUpon>TextMessageSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ObservationNumber.xaml.cs">
+      <DependentUpon>ObservationNumber.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ObservationType.xaml.cs">
+      <DependentUpon>ObservationType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\TextMessageType.xaml.cs">
+      <DependentUpon>TextMessageType.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resx\Resources.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.6.0\lib\netstandard1.1\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Extensions.DependencyInjection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Extensions.DependencyInjection.4.1.0\lib\netstandard1.1\Autofac.Extensions.DependencyInjection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Extras.CommonServiceLocator, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Extras.CommonServiceLocator.4.0.0\lib\portable40-net40+sl5+win8+wp8+wpa81\Autofac.Extras.CommonServiceLocator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Multitenant, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Multitenant.4.0.0\lib\netstandard1.1\Autofac.Multitenant.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.6.0.2\lib\netstandard1.1\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ExtendedReflection">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Pex\Microsoft.ExtendedReflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.1\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Android">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.0\Mono.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Battery, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Battery.2.1.1\lib\portable-net45+wp80+win8+wpa81\Plugin.Battery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Battery.Abstractions, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Battery.2.1.1\lib\portable-net45+wp80+win8+wpa81\Plugin.Battery.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Settings, Version=2.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.2.5.8\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions, Version=2.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.2.5.8\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net.Async, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLite.Net.Async-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.Primitives.4.3.0\lib\netstandard1.0\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.TypeConverter.4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Toasts.Forms.Plugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Toasts.Forms.Plugin.3.2.0\lib\netstandard1.1\Toasts.Forms.Plugin.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\3.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+    </Reference>
+    <Reference Include="X.PagedList, Version=5.3.0.21888, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\X.PagedList.5.3.0.5300\lib\portable-net45+wp8+win8\X.PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.UITest, Version=2.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.UITest.2.0.9\lib\Xamarin.UITest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.UITest.Helpers, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.UITest.Helpers.0.2.10\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10\Xamarin.UITest.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\CommunicationSelection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\ObservationType.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\TextMessageType.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\ObservationNumber.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\Lock.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\ComposeMessage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\Altitude.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\Heading.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\AirborneCraft.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\About.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\TextMessageSummary.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\ObservationMessageSummary.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pages\Reports.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.AirborneCraft">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView"
+                 ControlTemplate="{StaticResource SelectionTemplate}" VerticalOptions="FillAndExpand"  >
+    <Grid VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.77*"/>
+        <RowDefinition Height="0.23*" />
+      </Grid.RowDefinitions>
+      <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+          <RowDefinition/>
+          <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0" BackgroundColor="#396736" Margin="0,5,5,5">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.75*" />
+            <RowDefinition Height="0.2*" />
+          </Grid.RowDefinitions>
+          <Button x:Name="BtnFighter" Grid.Row="0" BackgroundColor="Transparent" WidthRequest="90" HeightRequest="80"  Clicked="BtnFighter_OnClicked"/>
+          <Label Grid.Row="1" x:Name="LblFighter"  Style="{StaticResource LabelStyleSmall}"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="0" BackgroundColor="#396736" Margin="5,5,5,5">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.75*" />
+            <RowDefinition Height="0.2*" />
+          </Grid.RowDefinitions>
+          <Button x:Name="BtnHelicopter" Grid.Row="0" WidthRequest="90" HeightRequest="80" BackgroundColor="Transparent"   Clicked="BtHelicopter_OnClicked"/>
+          <Label Grid.Row="1" x:Name="LblHelicopter"  Style="{StaticResource LabelStyleSmall}"/>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="0" BackgroundColor="#396736" Margin="5,5,0,5">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.75*" />
+            <RowDefinition Height="0.2*" />
+          </Grid.RowDefinitions>
+          <Button x:Name="BtnCivilian" Grid.Row="0" WidthRequest="90" HeightRequest="80"  BackgroundColor="Transparent"  Clicked="BtCivilian_OnClicked"/>
+          <Label Grid.Row="1" x:Name="LblCivilian"  Style="{StaticResource LabelStyleSmall}"/>
+        </Grid>
+        <!--<Grid Grid.Column="0" Grid.Row="1" BackgroundColor="#396736" Margin="0,5,5,5">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.75*" />
+            <RowDefinition Height="0.2*" />
+          </Grid.RowDefinitions>
+          <Button x:Name="BtnUnidentified" Grid.Row="0" WidthRequest="90" HeightRequest="80"  Clicked="BtnUnidentified_OnClicked"/>
+          <Label Grid.Row="1" x:Name="LblUnidentified"  Style="{StaticResource LabelStyleSmall}"/>
+        </Grid>-->
+        <Grid Margin="0,0,0,10" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid Grid.Column="0"  BackgroundColor="#396736" Margin="0,0,5,0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.75*" />
+              <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="BtnDrone" Grid.Row="0" WidthRequest="90" HeightRequest="80"  BackgroundColor="Transparent"  Clicked="BtnDrone_OnClicked"/>
+            <Label Grid.Row="1" x:Name="LblDrone"  Style="{StaticResource LabelStyleSmall}"/>
+          </Grid>
+          <Grid Grid.Column="1" BackgroundColor="#396736" Margin="5,0,0,0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.75*" />
+              <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="BtnMilitary" Grid.Row="0" WidthRequest="90" HeightRequest="80"  BackgroundColor="Transparent"  Clicked="BtnMilitary_OnClicked"/>
+            <Label Grid.Row="1" x:Name="LblMilitary"  Style="{StaticResource LabelStyleSmall}"/>
+          </Grid>
+        </Grid >
+      </Grid>
+
+      <Grid x:Name="GrdDirection" Grid.Row="1" VerticalOptions="Fill"  HorizontalOptions="Fill">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.4*" />
+          <ColumnDefinition Width="0.2*" />
+          <ColumnDefinition Width="0.4*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnBack"  Grid.Column="0" BorderRadius="10"
+                  BackgroundColor="#396736" TextColor="White" Clicked="BtnBack_OnClicked" >
+        </Button>
+        <!--<Grid x:Name="GrdSteps" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" x:Name="Img1" VerticalOptions="Center" />
+            <Image Grid.Column="2" x:Name="Img2" VerticalOptions="Center"/>
+            <Image Grid.Column="3" x:Name="Img3" VerticalOptions="Center"/>
+            <Image Grid.Column="4" x:Name="Img4" VerticalOptions="Center"/>
+            <Image Grid.Column="5" x:Name="Img5" VerticalOptions="Center"/>
+          </Grid>-->
+        <Button x:Name="BtnNext"  Grid.Column="2" BorderRadius="10"
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnNext_OnClicked" >
+        </Button>
+      </Grid>
+
+    </Grid>
+  </ContentView>
+</views:MainView>
+

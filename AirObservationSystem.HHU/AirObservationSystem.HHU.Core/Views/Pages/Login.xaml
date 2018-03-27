@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.Login">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView"
+                 ControlTemplate="{StaticResource SelectionTemplate}" VerticalOptions="FillAndExpand"  >
+    <Grid VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Margin="0,-180,0,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="100" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0.25*"/>
+        <ColumnDefinition Width="0.5*"/>
+        <ColumnDefinition Width="0.25*"/>
+      </Grid.ColumnDefinitions>
+      <Label x:Name="LblAplicationName" Grid.ColumnSpan="3" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" Style="{StaticResource LabelStyle}" VerticalTextAlignment="Center" VerticalOptions="Start">
+        <Label.FontSize>
+          <OnPlatform x:TypeArguments="x:Double" iOS="24" WinPhone="36" Android="30" />
+        </Label.FontSize>
+      </Label>
+      <Entry  Grid.Row="1" Grid.Column="1" x:Name="TxtUsername" VerticalOptions="Center"   BackgroundColor="Gray" Opacity="0.7" TextColor="White" Placeholder="User Name"></Entry>
+      <Entry Grid.Row="2" Grid.Column="1" x:Name="TxtPassword" VerticalOptions="Center" BackgroundColor="Gray" Opacity="0.7" TextColor="White" Placeholder="Password" IsPassword="True"></Entry>
+      <Button Grid.Row="3" Grid.Column="1" x:Name="BtnLogin" VerticalOptions="Center" HeightRequest="40" BackgroundColor="#4d6650" TextColor="White" Clicked="BtnLogin_OnClicked" ></Button>
+    </Grid>
+  </ContentView>
+</views:MainView>

@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{DB20308E-8E4C-4ED4-85AF-66DA6354F20D}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirObservationSystem.HHU.UWP</RootNamespace>
+    <AssemblyName>AirObservationSystem.HHU.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>AirObservationSystem.HHU.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PackageCertificateThumbprint>69F875AC7A82BE49CFA3EE3D2D2065838D25466B</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Helpers.cs" />
+    <Compile Include="Implementation\Bluetooth.cs" />
+    <Compile Include="Implementation\Crc32.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Implementation\UWPPlatform.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Implementation\SerialPort.cs" />
+    <Compile Include="Implementation\PlatformCultureInfo.cs" />
+    <Compile Include="Setup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="AirObservationSystem.HHU.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Images\ar-SA\about_aec.png" />
+    <Content Include="Assets\Images\ar-SA\about_rsaf.png" />
+    <Content Include="Assets\Images\ar-SA\audio.png" />
+    <Content Include="Assets\Images\ar-SA\bluetooth.png" />
+    <Content Include="Assets\Images\ar-SA\bluetooth_icon.png" />
+    <Content Include="Assets\Images\ar-SA\bluetooth_icon_on.png" />
+    <Content Include="Assets\Images\ar-SA\civilian_airplane.png" />
+    <Content Include="Assets\Images\ar-SA\comminucation.png" />
+    <Content Include="Assets\Images\ar-SA\east.png" />
+    <Content Include="Assets\Images\ar-SA\empty.png" />
+    <Content Include="Assets\Images\ar-SA\fighter.png" />
+    <Content Include="Assets\Images\ar-SA\filled.png" />
+    <Content Include="Assets\Images\ar-SA\helicopter.png" />
+    <Content Include="Assets\Images\ar-SA\high.png" />
+    <Content Include="Assets\Images\ar-SA\language.png" />
+    <Content Include="Assets\Images\ar-SA\lock.png" />
+    <Content Include="Assets\Images\ar-SA\lock_big.png" />
+    <Content Include="Assets\Images\ar-SA\logout.png" />
+    <Content Include="Assets\Images\ar-SA\low.png" />
+    <Content Include="Assets\Images\ar-SA\mid.png" />
+    <Content Include="Assets\Images\ar-SA\military_plane.png" />
+    <Content Include="Assets\Images\ar-SA\missed_call.png" />
+    <Content Include="Assets\Images\ar-SA\missed_msg.png" />
+    <Content Include="Assets\Images\ar-SA\next.png" />
+    <Content Include="Assets\Images\ar-SA\back.png" />
+    <Content Include="Assets\Images\ar-SA\north.png" />
+    <Content Include="Assets\Images\ar-SA\obsarve.png" />
+    <Content Include="Assets\Images\ar-SA\observation_base.png" />
+    <Content Include="Assets\Images\ar-SA\one.png" />
+    <Content Include="Assets\Images\ar-SA\operation_base.png" />
+    <Content Include="Assets\Images\ar-SA\refresh.png" />
+    <Content Include="Assets\Images\ar-SA\refresh1.png" />
+    <Content Include="Assets\Images\ar-SA\report.png" />
+    <Content Include="Assets\Images\ar-SA\reports.png" />
+    <Content Include="Assets\Images\ar-SA\send.png" />
+    <Content Include="Assets\Images\ar-SA\serial.png" />
+    <Content Include="Assets\Images\ar-SA\serial_icon.png" />
+    <Content Include="Assets\Images\ar-SA\serial_icon_on.png" />
+    <Content Include="Assets\Images\ar-SA\south.png" />
+    <Content Include="Assets\Images\ar-SA\text.png" />
+    <Content Include="Assets\Images\ar-SA\text2.png" />
+    <Content Include="Assets\Images\ar-SA\three.png" />
+    <Content Include="Assets\Images\ar-SA\two.png" />
+    <Content Include="Assets\Images\ar-SA\umaned_aerial_drone.png" />
+    <Content Include="Assets\Images\ar-SA\unidentified_flying_object.png" />
+    <Content Include="Assets\Images\ar-SA\user.png" />
+    <Content Include="Assets\Images\ar-SA\visual.png" />
+    <Content Include="Assets\Images\ar-SA\warring.png" />
+    <Content Include="Assets\Images\ar-SA\west.png" />
+    <Content Include="Assets\Images\en\about_aec.png" />
+    <Content Include="Assets\Images\en\about_rsaf.png" />
+    <Content Include="Assets\Images\en\audio.png" />
+    <Content Include="Assets\Images\en\back.png" />
+    <Content Include="Assets\Images\en\bluetooth.png" />
+    <Content Include="Assets\Images\en\bluetooth_icon.png" />
+    <Content Include="Assets\Images\en\bluetooth_icon_on.png" />
+    <Content Include="Assets\Images\en\civilian_airplane.png" />
+    <Content Include="Assets\Images\en\comminucation.png" />
+    <Content Include="Assets\Images\en\east.png" />
+    <Content Include="Assets\Images\en\empty.png" />
+    <Content Include="Assets\Images\en\fighter.png" />
+    <Content Include="Assets\Images\en\filled.png" />
+    <Content Include="Assets\Images\en\helicopter.png" />
+    <Content Include="Assets\Images\en\high.png" />
+    <Content Include="Assets\Images\en\language.png" />
+    <Content Include="Assets\Images\en\lock.png" />
+    <Content Include="Assets\Images\en\lock_big.png" />
+    <Content Include="Assets\Images\en\logout.png" />
+    <Content Include="Assets\Images\en\low.png" />
+    <Content Include="Assets\Images\en\mid.png" />
+    <Content Include="Assets\Images\en\missed_call.png" />
+    <Content Include="Assets\Images\en\missed_msg.png" />
+    <Content Include="Assets\Images\en\observation_base.png" />
+    <Content Include="Assets\Images\en\operation_base.png" />
+    <Content Include="Assets\Images\en\refresh.png" />
+    <Content Include="Assets\Images\en\refresh1.png" />
+    <Content Include="Assets\Images\en\reports.png" />
+    <Content Include="Assets\Images\en\send.png" />
+    <Content Include="Assets\Images\en\serial_icon_on.png" />
+    <Content Include="Assets\Images\en\warring.png" />
+    <Content Include="logo.png" />
+    <Content Include="Assets\Images\en\military_plane.png" />
+    <Content Include="Assets\Images\en\next.png" />
+    <Content Include="Assets\Images\en\north.png" />
+    <Content Include="Assets\Images\en\obsarve.png" />
+    <Content Include="Assets\Images\en\one.png" />
+    <Content Include="Assets\Images\en\report.png" />
+    <Content Include="Assets\Images\en\serial.png" />
+    <Content Include="Assets\Images\en\serial_icon.png" />
+    <Content Include="Assets\Images\en\south.png" />
+    <Content Include="Assets\Images\en\text.png" />
+    <Content Include="Assets\Images\en\text2.png" />
+    <Content Include="Assets\Images\en\three.png" />
+    <Content Include="Assets\Images\en\two.png" />
+    <Content Include="Assets\Images\en\umaned_aerial_drone.png" />
+    <Content Include="Assets\Images\en\unidentified_flying_object.png" />
+    <Content Include="Assets\Images\en\user.png" />
+    <Content Include="Assets\Images\en\visual.png" />
+    <Content Include="Assets\Images\en\west.png" />
+    <Content Include="portrait_bg.jpg" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AirObservationSystem.HHU.Core\AirObservationSystem.HHU.Core.csproj">
+      <Project>{74043e51-ef7b-4ce1-af3f-7612ed1d05b6}</Project>
+      <Name>AirObservationSystem.HHU.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AirObservationSystem.HHU.UWP.Tasks\AirObservationSystem.HHU.UWP.Tasks.csproj">
+      <Project>{5b0d8267-8c6e-4502-95e5-01b3803c7866}</Project>
+      <Name>AirObservationSystem.HHU.UWP.Tasks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.20.0">
+      <Name>SQLite for Universal Windows Platform %28SQLite.UWP.2015, Version=3.20.0%29</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsDesktop, Version=10.0.15063.0">
+      <Name>Windows Desktop Extensions for the UWP</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsMobile, Version=10.0.15063.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac">
+      <Version>4.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>5.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="SQLite.Net-PCL">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="SQLite.Net.Async-PCL">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="SQLite.Net.Core-PCL">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Collections.NonGeneric">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.EventBasedAsync">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Primitives">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.TypeConverter">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Contracts">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Debug">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.StackTrace">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Tools">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Tracing">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Parallel">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.NetworkInformation">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Requests">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reactive.Linq">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Resources.ResourceManager">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Formatters">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Json">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Primitives">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Xml">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.WindowsRuntime">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.WindowsRuntime.UI.Xaml">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ServiceModel.Duplex">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ServiceModel.Http">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ServiceModel.NetTcp">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ServiceModel.Primitives">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ServiceModel.Security">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Parallel">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Xml.ReaderWriter">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Xml.XmlDocument">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Xml.XmlSerializer">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Toasts.Forms.Plugin">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Battery">
+      <Version>2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>2.5.8</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>2.3.4.247</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

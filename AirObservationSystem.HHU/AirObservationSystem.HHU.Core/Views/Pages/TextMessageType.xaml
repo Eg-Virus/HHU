@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.TextMessageType">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView"
+                 ControlTemplate="{StaticResource SelectionTemplate}" VerticalOptions="FillAndExpand"  >
+    <Grid VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.77*"/>
+        <RowDefinition Height="0.23*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+      <Grid Grid.Column="0" Grid.Row="0" BackgroundColor="#396736" Margin="0,0,5,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.75*" />
+          <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnOperationBase" Grid.Row="0" WidthRequest="100" HeightRequest="130"  BackgroundColor="Transparent"  Clicked="BtnOperationBase_OnClicked"/>
+        <Label Grid.Row="1" x:Name="LblOperationBase"  Style="{StaticResource LabelStyle}"/>
+      </Grid>
+      <Grid Grid.Column="1" Grid.Row="0" BackgroundColor="#396736" Margin="0,0,5,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.75*" />
+          <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnObservationBase" Grid.Row="0" WidthRequest="100" HeightRequest="130"  BackgroundColor="Transparent"  Clicked="BtnObservationBase_OnClicked"/>
+        <Label Grid.Row="1" x:Name="LblObservationBase"  Style="{StaticResource LabelStyle}"/>
+      </Grid>
+      <Grid x:Name="GrdDirection" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Fill"  HorizontalOptions="Fill">
+        <Button x:Name="BtnBack"  Grid.Column="0" BorderRadius="10" HorizontalOptions="Center" VerticalOptions="Center"
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnBack_OnClicked" />
+      </Grid>
+    </Grid>
+  </ContentView>
+</views:MainView>

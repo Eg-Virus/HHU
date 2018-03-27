@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.ComposeMessage">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView" ControlTemplate="{StaticResource  WithoutTitleTemplate}"
+                  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+      <Grid.RowDefinitions>
+        <RowDefinition  Height="0.1*"/>
+        <RowDefinition  Height="0.4*"/>
+        <RowDefinition  Height="0.3*"/>
+        <RowDefinition  Height="0.2*"/>
+      </Grid.RowDefinitions>
+      <Label x:Name="LblPageName" Grid.Row="0" FontAttributes="Bold" Style="{StaticResource LabelStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+      <Editor Grid.Row="1"   x:Name="TxtMsge" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  TextChanged="TxtMsge_OnTextChanged">
+        
+      </Editor>
+      <Grid x:Name="GrdDirection" Grid.Row="3" Grid.Column="0" VerticalOptions="End"  HorizontalOptions="Fill">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.4*" />
+          <ColumnDefinition Width="0.2*" />
+          <ColumnDefinition Width="0.4*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnBack"  Grid.Column="0" BorderRadius="10" 
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnBack_OnClicked" >
+        </Button>
+        <Grid x:Name="GrdSteps" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <!--<Image Grid.Column="1" x:Name="Img1" VerticalOptions="Center" />
+          <Image Grid.Column="2" x:Name="Img2" VerticalOptions="Center"/>
+          <Image Grid.Column="3" x:Name="Img3" VerticalOptions="Center"/>
+          <Image Grid.Column="4" x:Name="Img4" VerticalOptions="Center"/>
+          <Image Grid.Column="5" x:Name="Img5" VerticalOptions="Center"/>-->
+        </Grid>
+        <Button x:Name="BtnNext"  Grid.Column="2" BorderRadius="10" 
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnNext_OnClicked" IsEnabled="False" >
+        </Button>
+      </Grid>
+    </Grid>
+  </ContentView>
+</views:MainView>

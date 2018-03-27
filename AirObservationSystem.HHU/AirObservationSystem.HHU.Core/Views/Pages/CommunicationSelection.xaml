@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.CommunicationSelection">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView"
+                 ControlTemplate="{StaticResource SelectionTemplate}" VerticalOptions="FillAndExpand"  >
+    <Grid x:Name="OuterGrid" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+      <Grid x:Name="GrdSelection" VerticalOptions="Center" >
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.5*"  />
+          <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="GrdSerial" Grid.Column="0" BackgroundColor="#396736" Margin="0,0,5,0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.75*" />
+            <RowDefinition Height="0.2*" />
+          </Grid.RowDefinitions>
+          <Button x:Name="BtnSerial" Grid.Row="0" WidthRequest="150" HeightRequest="130"  BackgroundColor="Transparent"  Clicked="BtnSerial_OnClicked"/>
+          <Label Grid.Row="1" x:Name="LblSerial"  Text="Serial" Style="{StaticResource LabelStyle}"/>
+        </Grid>
+        <Grid x:Name="GrdBluetooth" Grid.Column="1" BackgroundColor="#396736" Margin="5,0,0,0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.75*" />
+            <RowDefinition Height="0.25*" />
+          </Grid.RowDefinitions>
+          <Button x:Name="BtnBluetooth" Grid.Row="0" WidthRequest="150" HeightRequest="130" BackgroundColor="Transparent"  Clicked="BtnBluetooth_OnClicked"/>
+          <Label Grid.Row="1" x:Name="LblBluetooth" Text="Bluetooth" Style="{StaticResource LabelStyle}"/>
+        </Grid>
+      </Grid>
+
+      <!--<Grid x:Name="GrdDirection" VerticalOptions="End" >
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.3*" />
+          <ColumnDefinition Width="0.4*" />
+          <ColumnDefinition Width="0.3*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnBack" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" BorderRadius="10"
+                 WidthRequest="100" HeightRequest="80" BackgroundColor="#396736" Clicked="BtnBack_OnClicked"/>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Label x:Name="LblSteps" Grid.Row="0" Text="Steps x/y" TextColor="White" VerticalOptions="Center"  HorizontalOptions="Center"/>
+          <Grid Grid.Row="1" VerticalOptions="Center"  HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" x:Name="Img1" />
+            <Image Grid.Column="1" x:Name="Img2" />
+            <Image Grid.Column="2" x:Name="Img3" />
+            <Image Grid.Column="3" x:Name="Img4" />
+            <Image Grid.Column="4" x:Name="Img5"/>
+            <Image Grid.Column="5" x:Name="Img6"/>
+          </Grid>
+        </Grid>
+        <Button x:Name="BtnNext" Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" BorderRadius="10"
+                WidthRequest="130" HeightRequest="100" BackgroundColor="#396736" Clicked="BtnNext_OnClicked" />
+      </Grid>-->
+    </Grid>
+  </ContentView>
+</views:MainView>

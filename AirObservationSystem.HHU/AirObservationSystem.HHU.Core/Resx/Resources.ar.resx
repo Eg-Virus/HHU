@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnBack" xml:space="preserve">
+    <value>رجوع</value>
+  </data>
+  <data name="BtnLogin" xml:space="preserve">
+    <value>دخول</value>
+  </data>
+  <data name="BtnLogout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="BtnNext" xml:space="preserve">
+    <value>التالي</value>
+  </data>
+  <data name="BtnReports" xml:space="preserve">
+    <value>تقارير</value>
+  </data>
+  <data name="BtnSend" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="BtnUnlock" xml:space="preserve">
+    <value>فتح القفل</value>
+  </data>
+  <data name="ChangeConnectionMessage" xml:space="preserve">
+    <value>هل تريد تغير نوع الاتصال؟</value>
+  </data>
+  <data name="ChangeConnectionTitle" xml:space="preserve">
+    <value>تغير نوع الاتصال</value>
+  </data>
+  <data name="ExitMessage" xml:space="preserve">
+    <value>متاكد انك تريد الخروج؟</value>
+  </data>
+  <data name="ExitTitle" xml:space="preserve">
+    <value>تأكيد الخروج</value>
+  </data>
+  <data name="LblAirborneCraftPageName" xml:space="preserve">
+    <value>نوع المرصود</value>
+  </data>
+  <data name="LblAltitudePageName" xml:space="preserve">
+    <value>الإرتفاع</value>
+  </data>
+  <data name="LblAplicationName" xml:space="preserve">
+    <value>نظام المراقبة الجوي</value>
+  </data>
+  <data name="LblAudible" xml:space="preserve">
+    <value>سمعي</value>
+  </data>
+  <data name="LblBluetooth" xml:space="preserve">
+    <value>لاسلكي</value>
+  </data>
+  <data name="LblCivilian" xml:space="preserve">
+    <value>مدنية</value>
+  </data>
+  <data name="LblCommunicationSelectionPageName" xml:space="preserve">
+    <value>حدد نوع الاتصال</value>
+  </data>
+  <data name="LblComposeMsgPageName" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="LblDrone" xml:space="preserve">
+    <value>بدون طيار</value>
+  </data>
+  <data name="LblEast" xml:space="preserve">
+    <value>شرق</value>
+  </data>
+  <data name="LblFighter" xml:space="preserve">
+    <value>مقاتلة</value>
+  </data>
+  <data name="LblFilter" xml:space="preserve">
+    <value>نوع التقرير</value>
+  </data>
+  <data name="LblHeadingPageName" xml:space="preserve">
+    <value>الإتجاه</value>
+  </data>
+  <data name="LblHelicopter" xml:space="preserve">
+    <value>عامودية</value>
+  </data>
+  <data name="LblHigh" xml:space="preserve">
+    <value>مرتفع</value>
+  </data>
+  <data name="LblLow" xml:space="preserve">
+    <value>منخفض</value>
+  </data>
+  <data name="LblMid" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="LblMilitary" xml:space="preserve">
+    <value>ناقلة عسكرية</value>
+  </data>
+  <data name="LblNorth" xml:space="preserve">
+    <value>شمال</value>
+  </data>
+  <data name="LblObservationBase" xml:space="preserve">
+    <value>مركز الرصد</value>
+  </data>
+  <data name="LblObservationNumberPageName" xml:space="preserve">
+    <value>حدد عدد الرصد</value>
+  </data>
+  <data name="LblObservationTypePageName" xml:space="preserve">
+    <value>حدد نوع المراقبة</value>
+  </data>
+  <data name="LblOne" xml:space="preserve">
+    <value>واحد</value>
+  </data>
+  <data name="LblOperationBase" xml:space="preserve">
+    <value>مركز العمليات</value>
+  </data>
+  <data name="LblReportsPageName" xml:space="preserve">
+    <value>التقارير</value>
+  </data>
+  <data name="LblSerial" xml:space="preserve">
+    <value>سلكي</value>
+  </data>
+  <data name="LblSouth" xml:space="preserve">
+    <value>جنوب</value>
+  </data>
+  <data name="LblText" xml:space="preserve">
+    <value>نصي</value>
+  </data>
+  <data name="lblTextMessageSummaryPageName" xml:space="preserve">
+    <value>ملخص الرسالة</value>
+  </data>
+  <data name="lblTextMessageTypePageName" xml:space="preserve">
+    <value>نوع الرسالة</value>
+  </data>
+  <data name="LblThreeOrMore" xml:space="preserve">
+    <value>مجموعة</value>
+  </data>
+  <data name="LblTwo" xml:space="preserve">
+    <value>إثنتان</value>
+  </data>
+  <data name="LblUnidentified" xml:space="preserve">
+    <value>غير معروف</value>
+  </data>
+  <data name="LblVisual" xml:space="preserve">
+    <value>مرئ</value>
+  </data>
+  <data name="LblWest" xml:space="preserve">
+    <value>غرب</value>
+  </data>
+  <data name="LockMsg" xml:space="preserve">
+    <value>الوحدة مغلقة وتم تبليغ القاعدة</value>
+  </data>
+  <data name="LogoutMessage" xml:space="preserve">
+    <value>هل انت متاكد من انك تريد الخروج؟</value>
+  </data>
+  <data name="LogoutTitle" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="MessageDirectionObservation" xml:space="preserve">
+    <value>عمليات الرصد</value>
+  </data>
+  <data name="MessageDirectionOperation" xml:space="preserve">
+    <value>مركز عمليات</value>
+  </data>
+  <data name="MessageTypeAlerts" xml:space="preserve">
+    <value>تحذيرات</value>
+  </data>
+  <data name="MessageTypeNotifications" xml:space="preserve">
+    <value>تنبيهات</value>
+  </data>
+  <data name="MessageTypeWarrnings" xml:space="preserve">
+    <value>توجيهات</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="TxtPassword" xml:space="preserve">
+    <value>الرقم السري</value>
+  </data>
+  <data name="TxtUsername" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="BtnOk" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="LblAboutAddress" xml:space="preserve">
+    <value>الالكترونيات المتقدمة, مطار الملك خالدو المنطقة الصناعية, الرياض, المملكة العربية السعودية</value>
+  </data>
+  <data name="LblAboutAppName" xml:space="preserve">
+    <value>الوحدة الكفية</value>
+  </data>
+  <data name="LblAboutAuth" xml:space="preserve">
+    <value>الحقوق محفوظة الي شركة الالمترونيات المتقدمة</value>
+  </data>
+  <data name="LblAboutPageName" xml:space="preserve">
+    <value>عن الشركة</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>فشل الدخول, نرجو إعادة المحاولة</value>
+  </data>
+  <data name="ConnectionFailedText" xml:space="preserve">
+    <value>لا نستطيع الاتصال الان</value>
+  </data>
+  <data name="ConnectionFailedTitle" xml:space="preserve">
+    <value>فشل الاتصال</value>
+  </data>
+</root>

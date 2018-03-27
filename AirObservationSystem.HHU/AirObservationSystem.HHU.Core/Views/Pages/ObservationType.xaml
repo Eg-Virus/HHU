@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MainView x:TypeArguments="viewModels:MainViewModel"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:AirObservationSystem.HHU.Core.Views;assembly=AirObservationSystem.HHU.Core"
+  xmlns:viewModels="clr-namespace:AirObservationSystem.HHU.Core.ViewModels;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.Views.Pages.ObservationType">
+  <Page.Resources>
+    <ResourceDictionary>
+    </ResourceDictionary>
+  </Page.Resources>
+  <ContentView x:Name="ContentView"
+                 ControlTemplate="{StaticResource SelectionTemplate}" VerticalOptions="FillAndExpand"  >
+    <Grid VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.6*"/>
+        <RowDefinition Height="0.2*" />
+        <RowDefinition Height="0.2*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition />
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+      <Grid Grid.Column="0" Grid.Row="0" BackgroundColor="#396736" Margin="0,0,5,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.75*" />
+          <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnText" Grid.Row="0" WidthRequest="80" HeightRequest="90"  BackgroundColor="Transparent"  Clicked="BtnText_OnClicked"/>
+        <Label Grid.Row="1" x:Name="LblText"  Style="{StaticResource LabelStyle}"/>
+      </Grid>
+      <Grid Grid.Column="1" Grid.Row="0" BackgroundColor="#396736" Margin="0,0,5,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.75*" />
+          <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnAudible" Grid.Row="0" WidthRequest="80" HeightRequest="90" BackgroundColor="Transparent"   Clicked="BtnAudible_OnClicked"/>
+        <Label Grid.Row="1" x:Name="LblAudible"  Style="{StaticResource LabelStyle}"/>
+      </Grid>
+      <Grid Grid.Column="2" Grid.Row="0" BackgroundColor="#396736" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.75*" />
+          <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnVisual" Grid.Row="0" WidthRequest="80" HeightRequest="90"  BackgroundColor="Transparent"  Clicked="BtnVisual_OnClicked"/>
+        <Label Grid.Row="1" x:Name="LblVisual"  Style="{StaticResource LabelStyle}"/>
+      </Grid>
+
+      <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Fill"  HorizontalOptions="Fill">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.2*" />
+          <ColumnDefinition Width="0.6*" />
+          <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+      <Picker Grid.Column="1" x:Name="PkrDestinationCall" SelectedIndexChanged="PkrDestinationCall_OnSelectedIndexChanged" ></Picker>
+        
+      </Grid>
+
+      <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Fill"  HorizontalOptions="Fill">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.45*" />
+          <ColumnDefinition Width="0.1*" />
+          <ColumnDefinition Width="0.45*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnLogout"  Grid.Column="0" BorderRadius="10"
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnLogout_OnClicked" >
+        </Button>
+
+        <Button x:Name="BtnReports"  Grid.Column="2" BorderRadius="10"
+                   BackgroundColor="#396736" TextColor="White" Clicked="BtnReports_OnClicked" >
+        </Button>
+      </Grid>
+
+
+    </Grid>
+  </ContentView>
+</views:MainView>

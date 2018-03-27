@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime" 
+             xmlns:core="clr-namespace:AirObservationSystem.HHU.Core;assembly=AirObservationSystem.HHU.Core"
+             x:Class="AirObservationSystem.HHU.Core.App">
+    <Application.Resources>
+
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <!--<Image x:Key="BtnImage" Source=""></Image>-->
+
+            <!--Styles-->
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="true">
+                <Setter Property="BackgroundImage" Value="portrait_bg.jpg" />
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double" >
+                            <On Platform="iOS,Android">18</On>
+                            <On Platform="Windows">22</On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="LabelStyleSmall" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double" >
+                            <On Platform="iOS,Android">18</On>
+                            <On Platform="Windows">16</On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="BtnSelection" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" >
+                            <On Platform="iOS,Android" Value="#4d6650"></On>
+                            <On Platform="Windows" Value="#4d6650"></On>
+                            <On Platform=""></On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Image" Value="Assets/east"></Setter>
+                <Setter Property="BorderColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" >
+                            <On Platform="Windows" Value="Transparent"></On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="BtnDirection" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" >
+                            <On Platform="Windows" Value="#396736"></On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="BorderColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" >
+                            <On Platform="Windows" Value="Transparent"></On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--Templates-->
+            <ControlTemplate x:Key="SelectionTemplate" >
+                <Grid VerticalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.07*" />
+                        <RowDefinition Height="0.35*" />
+                        <RowDefinition Height="0.1*" />
+                        <RowDefinition Height="0.44*" />
+                        <RowDefinition Height="0.04*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.02*" />
+                        <ColumnDefinition Width="0.48*" />
+                        <ColumnDefinition Width="0.48*" />
+                        <ColumnDefinition Width="0.02*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.ColumnSpan="4" Grid.Column="0" BackgroundColor="#77212a" >
+                        <Grid.ColumnDefinitions>
+                            <!--Connection-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Lang-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Station Name-->
+                            <ColumnDefinition Width="0.5*" />
+                            <!--Logo-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Notification-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Battery-->
+                            <ColumnDefinition Width="0.1*" />
+                        </Grid.ColumnDefinitions>
+                        <!--<Image Grid.Column="0" x:Name="ImgCommunicationType"  Source ="{TemplateBinding Parent.CommunicationType}" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+                        <Button Grid.Column="0" x:Name="BtnCommunicationType" IsVisible="{TemplateBinding Parent.CommunicationTypeIsVisible}" BackgroundColor="Transparent" Image="{TemplateBinding Parent.CommunicationType}" Clicked="BtnCommunicationType_OnClicked"/>
+                        <Button Grid.Column="1" x:Name="BtnLang" Text="{TemplateBinding Parent.LanguageLetter}" TextColor="White" BackgroundColor="Transparent" FontAttributes="Bold" Clicked="BtnLang_OnClicked"/>
+                        <Label Grid.Column="2" Text="{TemplateBinding Parent.StationName}" TextColor="White" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  />
+                        <!--<Image Grid.Column="3" x:Name="ImgLogo" Source="logo.png" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+                        <Button Grid.Column="3" x:Name="BtnAbout" Image="logo.png" BackgroundColor="Transparent" Clicked="BtnAbout_OnClicked"/>
+                        <!--<Image Grid.Column="4" x:Name="ImgNotification" Source="{TemplateBinding Parent.Notification}" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+                        <Button Grid.Column="4" x:Name="BtnNotification" IsVisible="{TemplateBinding Parent.NotificationIsVisible}" BackgroundColor="Transparent" Image="{TemplateBinding Parent.Notification}" Clicked="BtnNotification_OnClicked"/>
+                        <Label Grid.Column="5" Text="{TemplateBinding Parent.Battery}" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" />
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" BackgroundColor="#4d6650" IsVisible="{TemplateBinding Parent.PageInfoGridVisible}">
+                        <Image x:Name="ImgPageImage"  Source ="{TemplateBinding Parent.PageImage}" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1" BackgroundColor="#77212a" Margin="0,-7,0,0" IsVisible="{TemplateBinding Parent.PageInfoGridVisible}">
+                        <Label x:Name="LblPageName" Text="{TemplateBinding Parent.PageName}"  TextColor="White"
+                 HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" />
+                    </Grid>
+
+                    <ContentPresenter Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1" Margin="0"/>
+
+                    <Grid Grid.Row="4" Grid.ColumnSpan="4" Grid.Column="0" Padding="0" IsVisible="{TemplateBinding Parent.ProgressBarGridVisible}" VerticalOptions="Fill" BackgroundColor="Fuchsia">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <ProgressBar x:Name="Bar" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Fill" HorizontalOptions="Fill" Progress="{TemplateBinding Parent.ProgressBarProgress}" BackgroundColor="Gray" />
+                        <Button Grid.Column="1" x:Name="BtnRefresh" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="BtnRefresh_OnClicked" Image="{TemplateBinding Parent.ProgressBarRefreshImage}" IsVisible="{TemplateBinding Parent.ProgressBarRefreshVisable}" TextColor="White" VerticalOptions="Center"></Button>
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Key="WithoutTitleTemplate" >
+                <Grid VerticalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.07*" />
+                        <RowDefinition Height="0.89*" />
+                        <RowDefinition Height="0.04*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.02*" />
+                        <ColumnDefinition Width="0.48*" />
+                        <ColumnDefinition Width="0.48*" />
+                        <ColumnDefinition Width="0.02*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.ColumnSpan="4" Grid.Column="0" BackgroundColor="#77212a" >
+                        <Grid.ColumnDefinitions>
+                            <!--Connection-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Lang-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Station Name-->
+                            <ColumnDefinition Width="0.5*" />
+                            <!--Logo-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Notification-->
+                            <ColumnDefinition Width="0.1*" />
+                            <!--Battery-->
+                            <ColumnDefinition Width="0.1*" />
+                        </Grid.ColumnDefinitions>
+                        <!--<Image Grid.Column="0" x:Name="ImgCommunicationType"  Source ="{TemplateBinding Parent.CommunicationType}" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+                        <Button Grid.Column="0" x:Name="BtnCommunicationType" IsVisible="{TemplateBinding Parent.CommunicationTypeIsVisible}" BackgroundColor="Transparent" Image="{TemplateBinding Parent.CommunicationType}" Clicked="BtnCommunicationType_OnClicked"/>
+                        <Button Grid.Column="1" x:Name="BtnLang" Text="{TemplateBinding Parent.LanguageLetter}" TextColor="White" BackgroundColor="Transparent" FontAttributes="Bold" Clicked="BtnLang_OnClicked"/>
+                        <Label Grid.Column="2" Text="{TemplateBinding Parent.StationName}" TextColor="White" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  />
+                        <!--<Image Grid.Column="3" x:Name="ImgLogo" Source="logo.png" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+                        <Button Grid.Column="3" x:Name="BtnAbout" Image="logo.png" BackgroundColor="Transparent" Clicked="BtnAbout_OnClicked"/>
+                        <!--<Image Grid.Column="4" x:Name="ImgNotification" Source="{TemplateBinding Parent.Notification}" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+                        <Button Grid.Column="4" x:Name="BtnNotification" IsVisible="{TemplateBinding Parent.NotificationIsVisible}" BackgroundColor="Transparent" Image="{TemplateBinding Parent.Notification}" Clicked="BtnNotification_OnClicked"/>
+                        <Label Grid.Column="5" Text="{TemplateBinding Parent.Battery}" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" />
+                    </Grid>
+
+                    <ContentPresenter Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" Margin="0"/>
+
+                    <!--<Grid Grid.Row="2" Grid.ColumnSpan="4" Grid.Column="0" Padding="0" IsVisible="{TemplateBinding Parent.ProgressBarGridVisible}" VerticalOptions="Fill" BackgroundColor="Fuchsia">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <ProgressBar x:Name="Bar" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Fill" HorizontalOptions="Fill" Progress="{TemplateBinding Parent.ProgressBarProgress}" BackgroundColor="Gray" />
+                        <Button Grid.Column="1" x:Name="BtnRefresh" WidthRequest="70" Clicked="BtnRefresh_OnClicked" Image="refresh.png" IsVisible="{TemplateBinding Parent.ProgressBarRefreshVisable}" TextColor="White" VerticalOptions="Center"></Button>
+                    </Grid>-->
+                </Grid>
+            </ControlTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
